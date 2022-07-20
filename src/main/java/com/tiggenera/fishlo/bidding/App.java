@@ -1,4 +1,4 @@
-package com.tiggenera.fishlobidding;
+package com.tiggenera.fishlo.bidding;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

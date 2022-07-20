@@ -1,4 +1,4 @@
-package com.tiggenera.fishlobidding;
+package com.tiggenera.fishlo.bidding;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

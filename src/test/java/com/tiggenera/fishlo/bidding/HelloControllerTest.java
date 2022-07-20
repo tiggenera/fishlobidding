@@ -1,6 +1,8 @@
-package com.tiggenera.fishlobidding;
+package com.tiggenera.fishlo.bidding;
 
 import com.jayway.restassured.RestAssured;
+import com.tiggenera.fishlo.bidding.App;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
