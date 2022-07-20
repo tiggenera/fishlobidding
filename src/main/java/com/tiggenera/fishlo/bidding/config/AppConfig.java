@@ -1,4 +1,4 @@
-package com.tiggenera.fishlo.bidding;
+package com.tiggenera.fishlo.bidding.config;
 
 import net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy;
 import org.springframework.beans.factory.annotation.Autowired;
