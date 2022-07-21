@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://fishlo.in/bidding.schema.json",
+	"title": "bidding",
+	"description": "this json represents the fields inside the bidding entity object",
+	"type": "object",
+	"properties": {
+		"buyerCompanyID": {
+			"description": "The display id of the bidding company",
+			"type": "string"
+		},
+		"buyerPrice": {
+			"description": "The price at which the bidding is done",
+			"type": "number"
+		},
+		"broker": {
+			"description": "name of the broker that is doing the bidding",
+			"type": "string"
+		},
+		"brokerID": {
+			"description": "id of the broker that is doing the bidding",
+			"type": "string"
+		},
+		"currentTimeStamp": {
+			"description": "timestamp when the message reached the system",
+			"type": "string"
+		},
+		"auctionID": {
+			"description": "id of the auction for which this bidding is done",
+			"type": "string"
+		},
+		"sellerID": {
+			"description": "The seller whose auction under which this bidding is happening",
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}
