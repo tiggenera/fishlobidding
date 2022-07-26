@@ -20,7 +20,7 @@ pipeline {
     stage('build') {
       steps {
       withMaven(maven: 'maven') {
-	    sh "mvn clean install -Dsonar.projectKey=fishlobidding -Dsonar.host.url=http://192.168.1.6:9000 -Dsonar.login=sqp_f864c9bd4a2103941f90209b2aad4267d794db4d"
+	    sh "mvn clean install -Dsonar.projectKey=fishlobidding -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_f864c9bd4a2103941f90209b2aad4267d794db4d"
 	}
       }
     }
