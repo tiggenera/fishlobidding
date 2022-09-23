@@ -1,7 +1,5 @@
 package com.tiggenera.fishlo.bidding.serializer;
 
-import java.util.Map;
-
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serdes.WrapperSerde;
 import org.apache.kafka.common.serialization.Serializer;

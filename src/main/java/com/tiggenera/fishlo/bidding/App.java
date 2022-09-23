@@ -14,7 +14,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = { "com.tiggenera.fishlo.bidding.config", "com.tiggenera.fishlo.bidding.controller",
 		"com.tiggenera.fishloprofile.app", "com.tiggenera.fishlo.bidding.dao", "com.tiggenera.fishlo.bidding.service" })
 @EnableAutoConfiguration(exclude = { ErrorMvcAutoConfiguration.class, GsonAutoConfiguration.class ,SecurityAutoConfiguration.class})
-
 public class App extends SpringBootServletInitializer {
 	public App() {
 		super();
@@ -29,5 +28,7 @@ public class App extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
+	
+	
 
 }
