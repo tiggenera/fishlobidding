@@ -8,13 +8,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
+import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 
 @Configuration
 @EnableWebSocketMessageBroker
-public class WebsocketAppConfig implements WebSocketMessageBrokerConfigurer {
+public class WebsocketAppConfig  implements WebSocketMessageBrokerConfigurer {
+	
+
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
-		stompEndpointRegistry.addEndpoint("/websocket-chat").setAllowedOrigins("http://localhost:3000").withSockJS();
+		stompEndpointRegistry.addEndpoint("/websocket-chat").setHandshakeHandler(new DefaultHandshakeHandler()).setAllowedOrigins("http://localhost:3000").withSockJS();
 	}
 
 	@Override
@@ -30,7 +33,7 @@ public class WebsocketAppConfig implements WebSocketMessageBrokerConfigurer {
 
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowCredentials(false).allowedOrigins("http://localhost:3000").allowedMethods("*");
+				registry.addMapping("/**").allowCredentials(true).allowedOriginPatterns("http://localhost:3000").allowedMethods("*");
 			}
 		};
 	}

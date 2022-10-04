@@ -19,10 +19,9 @@ public class BidController {
 	private SendBid bidSender;
 
     @MessageMapping("/user-all")
-    @SendTo("/topic/user")
-	public Bidding sendBid(@Payload Bidding bidding) {
+	public void sendBid(@Payload Bidding bidding) {
     	bidSender.send(bidding);
-		return bidding;
+    	logger.info("*******************************sending message to the platform *************************************************{}",bidding);
 	}
 
 }
